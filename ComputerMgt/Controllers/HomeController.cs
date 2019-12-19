@@ -10,7 +10,7 @@ namespace ComputerMgt.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return View("Index", "_Main");
         }
 
         public ActionResult About()

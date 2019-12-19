@@ -1,24 +1,75 @@
-﻿body {
-    padding-top: 50px;
-    padding-bottom: 20px;
+﻿* {
+    margin: 0;
+    padding: 0;
 }
 
-/* Set padding to keep content from hitting the edges */
-.body-content {
-    padding-left: 15px;
-    padding-right: 15px;
+body {
+    height: 100%
 }
 
-/* Override the default bootstrap behavior where horizontal description lists 
-   will truncate terms that are too long to fit in the left column 
-*/
-.dl-horizontal dt {
-    white-space: normal;
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f2f2f2;
 }
 
-/* Set width on the form input elements since they're 100% wide by default */
-input,
-select,
-textarea {
-    max-width: 280px;
+#content {
+    width: 30%;
+    overflow: hidden;
+    padding: 20px 30px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    text-align: center;
 }
+
+#form-group {
+    position: relative;
+    margin-top: 30px;
+    width: 100%;
+    text-align: end;
+}
+
+#form-btn {
+    position: relative;
+    text-align: end;
+    margin-top: 20px;
+    margin-bottom: 35px;
+}
+
+.lbl {
+    position: absolute;
+    left: 5px;
+    bottom: 0;
+    font-weight: 500;
+    transition: 0.3s ease;
+    color: #333;
+}
+
+.inp {
+    width: 100%;
+    height: 30px;
+    background: none;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    padding: 0 5px
+}
+
+.inp:focus + .lbl, .inp:valid + .lbl {
+    left: 0;
+    bottom: 90%;
+    font-size: 11px;
+}
+
+.inp:focus, .inp:valid {
+    border: 1px solid #777;
+}
+
+button {
+    background: none !important;
+    outline: none !important;
+}
+
+
