@@ -26,5 +26,9 @@ namespace ComputerMgt.Controllers
 
             return View();
         }
+        public ActionResult Register()
+        {
+            return View("Register", "_Main");
+        }
     }
 }

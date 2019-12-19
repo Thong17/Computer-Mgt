@@ -12,7 +12,10 @@ header {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    background-color: #f2f2f2;
+}
+
+.logo {
+    margin-bottom: 20px;
 }
 
 #content {
@@ -26,7 +29,7 @@ header {
 
 #form-group {
     position: relative;
-    margin-top: 30px;
+    margin-top: 25px;
     width: 100%;
     text-align: end;
 }
@@ -35,13 +38,13 @@ header {
     position: relative;
     text-align: end;
     margin-top: 20px;
-    margin-bottom: 35px;
+    margin-bottom: 25px;
 }
 
 .lbl {
     position: absolute;
-    left: 5px;
-    bottom: 0;
+    left: 10px;
+    bottom: 3px;
     font-weight: 500;
     transition: 0.3s ease;
     color: #333;
@@ -49,12 +52,12 @@ header {
 
 .inp {
     width: 100%;
-    height: 30px;
+    height: 35px;
     background: none;
     border: 1px solid #ccc;
     border-radius: 5px;
     outline: none;
-    padding: 0 5px
+    padding: 0 5px;
 }
 
 .inp:focus + .lbl, .inp:valid + .lbl {
@@ -72,4 +75,68 @@ button {
     outline: none !important;
 }
 
+.loader-wrapper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111;
+}
+
+.loader {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    position: relative;
+    border: 4px solid #fff;
+    animation: loader 2s infinite ease;
+}
+
+.loader-inner {
+    vertical-align: top;
+    display: inline-block;
+    width: 100%;
+    background-color: #fff;
+    animation: loader-inner 2s infinite ease;
+}
+
+@keyframes loader {
+    0% {
+        transform: rotate(0deg);
+    }
+    25% {
+        transform: rotate(180deg);
+    }
+    50% {
+        transform: rotate(180deg);
+    }
+    75% {
+        transform: rotate(360deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes loader-inner {
+    0% {
+        height: 0%
+    }
+    25% {
+        height: 0%
+    }
+    50% {
+        height: 100%
+    }
+    75% {
+        height: 100%
+    }
+    100% {
+        height: 0%
+    }
+}
 
