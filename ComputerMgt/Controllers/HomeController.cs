@@ -10,7 +10,7 @@ namespace ComputerMgt.Controllers
     {
         public ActionResult Index()
         {
-            return View("Index", "_Main");
+            return View();
         }
 
         public ActionResult About()
@@ -25,10 +25,6 @@ namespace ComputerMgt.Controllers
             ViewBag.Message = "Your contact page.";
 
             return View();
-        }
-        public ActionResult Register()
-        {
-            return View("Register", "_Main");
         }
     }
 }
